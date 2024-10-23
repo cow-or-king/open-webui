@@ -11,9 +11,7 @@
 	import { getChatByShareId } from '$lib/apis/chats';
 
 	import Messages from '$lib/components/chat/Messages.svelte';
-	import Navbar from '$lib/components/layout/Navbar.svelte';
 	import { getUserById } from '$lib/apis/users';
-	import { error } from '@sveltejs/kit';
 	import { getModels } from '$lib/apis';
 
 	const i18n = getContext('i18n');

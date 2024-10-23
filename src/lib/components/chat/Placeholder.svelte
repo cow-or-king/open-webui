@@ -124,10 +124,8 @@
 										<img
 											crossorigin="anonymous"
 											src={model?.info?.meta?.profile_image_url ??
-												($i18n.language === 'dg-DG'
-													? `/doge.png`
-													: `${WEBUI_BASE_URL}/static/favicon.png`)}
-											class=" size-[2.5rem] rounded-full border-[1px] border-gray-200 dark:border-none"
+												`${WEBUI_BASE_URL}/static/favicon.png`}
+											class="w-16 rounded-full dark:border-none"
 											alt="logo"
 											draggable="false"
 										/>
@@ -137,7 +135,7 @@
 						</div>
 					</div>
 
-					<div class=" capitalize line-clamp-1 text-3xl md:text-4xl" in:fade={{ duration: 100 }}>
+					<div class=" capitalize line-clamp-1 text-3xl md:text-4xl pt-4" in:fade={{ duration: 100 }}>
 						{#if models[selectedModelIdx]?.info}
 							{models[selectedModelIdx]?.info?.name}
 						{:else}

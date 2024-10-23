@@ -344,7 +344,7 @@
 
 		<div class="flex-auto w-0 pl-1">
 			<Name>
-				{model?.name ?? message.model}
+				{"The Clever Cow"}
 
 				{#if message.timestamp}
 					<span

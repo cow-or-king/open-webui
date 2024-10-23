@@ -17,3 +17,5 @@ uploads
 .ipynb_checkpoints
 **/*.db
 _test
+backend/venv
+backend/data

@@ -105,13 +105,13 @@
 </svelte:head>
 
 {#if loaded}
-	<div class="fixed m-10 z-50">
-		<div class="flex space-x-2">
+	<div class="fixed ml-10 mt-56 z-50">
+		<div class="flex ">
 			<div class=" self-center">
 				<img
 					crossorigin="anonymous"
 					src="{WEBUI_BASE_URL}/static/favicon.png"
-					class=" w-8 rounded-full"
+					class=" w-40 rounded-full"
 					alt="logo"
 				/>
 			</div>
@@ -119,19 +119,20 @@
 	</div>
 
 	<div class=" bg-white dark:bg-gray-950 min-h-screen w-full flex justify-center font-primary">
-		<!-- <div class="hidden lg:flex lg:flex-1 px-10 md:px-16 w-full bg-yellow-50 justify-center">
+		<div class="hidden lg:flex lg:flex-1 px-10 md:px-16 w-full bg-gray-100 justify-center">
 			<div class=" my-auto pb-16 text-left">
 				<div>
-					<div class=" font-semibold text-yellow-600 text-4xl">
-						{$i18n.t('Get up and running with')} <br /> {$i18n.t('large language models, locally.')}
+					<div class="font-nunito font-semibold text-4xl">
+						{$i18n.t('The Clever Cow')}
 					</div>
+					
 
-					<div class="mt-2 text-yellow-600 text-xl">
-						{$i18n.t('Run Llama 2, Code Llama, and other models. Customize and create your own.')}
+					<div class="mt-2 text-gray-600 text-xl whitespace-pre text-justify">
+						{$i18n.t('Hello World!')}
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
 		<div class="w-full sm:max-w-md px-10 min-h-screen flex flex-col text-center">
 			{#if ($config?.features.auth_trusted_header ?? false) || $config?.features.auth === false}

@@ -11,10 +11,15 @@
 }
 
 @font-face {
+	font-family: 'Nunito';
+	src: url('/assets/fonts/Nunito-Regular.ttf');
+	font-display: swap;
+}
+/* @font-face {
 	font-family: 'Mona Sans';
 	src: url('/assets/fonts/Mona-Sans.woff2');
 	font-display: swap;
-}
+} */
 
 html {
 	word-break: break-word;
@@ -43,7 +48,7 @@ math {
 }
 
 .font-primary {
-	font-family: 'Archivo', sans-serif;
+	font-family: 'Nunito';
 }
 
 iframe {
@@ -179,3 +184,43 @@ input[type='number'] {
 .bg-gray-950-90 {
 	background-color: rgba(var(--color-gray-950, #0d0d0d), 0.9);
 }
+
+
+
+	  
+	.bg-primary, .bg-emerald-700 {
+		background-color:#1f4735;
+	}
+    .tx-primary {
+		color:#1f4735
+	}
+	
+	.opacity {
+		opacity: 10;
+	}
+
+	.font-nunito {
+		font-family:'nunito'
+	}
+	.tx-secondary-light {
+		color:#c13080
+	}
+
+	 .bg-emerald-700:hover,
+		.bg-primary-light, .bg-emerald-600 {
+		background-color:#a1d6a6;
+	}
+	.bg-primary-light2{
+		background-color:rgba(161, 214, 166, 0.51);
+	}
+
+
+	.bg-secondary{
+		background-color:#661940;
+	}
+	.bg-secondary-light{
+		background-color:#c13080;
+	}
+	.bg-yel{
+		background-color:#f1e97e;
+	}

@@ -269,20 +269,20 @@
 	bind:this={navElement}
 	id="sidebar"
 	class="h-screen max-h-[100dvh] min-h-screen select-none {$showSidebar
-		? 'md:relative w-[260px]'
-		: '-translate-x-[260px] w-[0px]'} bg-gray-200 text-gray-900 dark:bg-gray-950 dark:text-gray-200 text-sm transition fixed z-50 top-0 left-0
+		? 'md:relative w-[335px]'
+		: '-translate-x-[335px] w-[0px]'} radius bg-gray-100 text-gray-900 dark:bg-gray-950 dark:text-gray-200 text-sm transition fixed z-50 top-0 left-0
         "
 	data-state={$showSidebar}
 >
 	<div
-		class="py-2.5 my-auto flex flex-col justify-between h-screen max-h-[100dvh] w-[260px] z-50 {$showSidebar
+		class="py-2.5 my-auto flex flex-col justify-between h-screen max-h-[100dvh] w-[335px] z-50 {$showSidebar
 			? ''
 			: 'invisible'}"
 	>
 		<div class="px-2.5 flex justify-between space-x-1 text-gray-600 dark:text-gray-400">
 			<a
 				id="sidebar-new-chat-button"
-				class="flex flex-1 justify-between rounded-xl px-2 h-full hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+				class="flex flex-1  rounded-xl mr-1 pl-1 px-2 h-full hover:bg-gray-50 dark:hover:bg-gray-900 transition"
 				href="/"
 				draggable="false"
 				on:click={async () => {
@@ -297,18 +297,16 @@
 					}, 0);
 				}}
 			>
-				<div class="self-center mx-1.5">
+				<!-- <div class="self-center mx-1.5">
 					<img
 						crossorigin="anonymous"
 						src="{WEBUI_BASE_URL}/static/favicon.png"
 						class="w-14 -translate-x-1.5 rounded-full"
 						alt="logo"
 					/>
-				</div>
-				<div class=" self-center font-medium text-sm text-gray-850 dark:text-white font-primary">
-					{$i18n.t('New Chat')}
-				</div>
-				<div class="self-center ml-auto">
+				</div> -->
+				
+				<div class="self-center ml-1">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 20 20"
@@ -323,10 +321,13 @@
 						/>
 					</svg>
 				</div>
+				<div class=" self-center font-medium text-sm ml-2 text-gray-850 dark:text-white font-primary">
+					{$i18n.t('New Chat')}
+				</div>
 			</a>
 
 			<button
-				class=" cursor-pointer px-2 py-2 flex rounded-xl hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+				class=" cursor-pointer px-2 py-2 flex rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition"
 				on:click={() => {
 					showSidebar.set(!$showSidebar);
 				}}
@@ -350,10 +351,10 @@
 			</button>
 		</div>
 
-		{#if $user?.role === 'admin'}
+	 	{#if $user?.role === 'admin'}
 			<div class="px-2.5 flex justify-center text-gray-800 dark:text-gray-200">
 				<a
-					class="flex-grow flex space-x-3 rounded-xl px-2.5 py-2 hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+					class="flex-grow flex space-x-3 rounded-xl px-2.5 py-2 hover:bg-gray-50 dark:hover:bg-gray-900 transition"
 					href="/workspace"
 					on:click={() => {
 						selectedChatId = null;
@@ -387,7 +388,7 @@
 					</div>
 				</a>
 			</div>
-		{/if}
+		{/if} 
 
 		<div
 			class="relative flex flex-col flex-1 overflow-y-auto {$temporaryChatEnabled
@@ -400,7 +401,7 @@
 
 			<div class="px-2 mt-0.5 mb-2 flex justify-center space-x-2">
 				<div class="flex w-full pt-2 rounded-xl" id="chat-search">
-					<div class="self-center pl-3 py-2 rounded-l-xl bg-gray-100">
+					<div class="self-center pl-3 py-2 rounded-l-xl bg-gray-50">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 20 20"
@@ -416,7 +417,7 @@
 					</div>
 
 					<input
-						class="w-full rounded-r-xl py-1.5 pl-2.5 pr-4 text-sm bg-gray-100 dark:text-gray-300 outline-none"
+						class="w-full rounded-r-xl py-1.5 pl-2.5 pr-4 text-sm bg-gray-50 dark:text-gray-300 outline-none"
 						placeholder={$i18n.t('Search')}
 						bind:value={search}
 						on:focus={async () => {
@@ -582,7 +583,7 @@
 						}}
 					>
 						<button
-							class=" flex rounded-xl py-3 px-3.5 w-full hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+							class=" flex rounded-xl py-3 px-3.5 w-full hover:bg-gray-50 dark:hover:bg-gray-900 transition"
 							on:click={() => {
 								showDropdown = !showDropdown;
 							}}

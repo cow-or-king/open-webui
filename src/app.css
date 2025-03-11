@@ -224,3 +224,16 @@ input[type='number'] {
 	.bg-yel{
 		background-color:#f1e97e;
 	}
+
+	.bg-gray-100 {
+		--tw-bg-opacity: 1;
+		background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+	}
+
+	.radius {
+		border-radius: 15px !important;
+	}
+
+	.text-14 {
+		font-size: 14px;
+	}

@@ -103,9 +103,10 @@
 		{/if}
 
 		<div
-			class="w-full text-3xl text-gray-800 dark:text-gray-100 font-medium text-center flex items-center gap-4 font-primary"
+			class="w-full text-3xl text-gray-800 dark:text-gray-100 font-medium text-center flex items-center pl-20 gap-4 font-primary"
 		>
-			<div class="w-full flex flex-col justify-center items-center">
+
+			<div class="w-full flex flex-col justify-center ">
 				<div class="flex flex-col md:flex-row justify-center gap-2 md:gap-3.5 w-fit">
 					<div class="flex flex-shrink-0 justify-center">
 						<div class="flex -space-x-4 mb-0.5" in:fade={{ duration: 100 }}>
@@ -184,7 +185,7 @@
 				</div>
 
 				<div
-					class="text-base font-normal xl:translate-x-6 md:max-w-3xl w-full py-3 {atSelectedModel
+					class="text-base font-normal md:max-w-3xl w-full py-3 {atSelectedModel
 						? 'mt-2'
 						: ''}"
 				>
@@ -208,6 +209,7 @@
 					/>
 				</div>
 			</div>
+			
 		</div>
 		<div class="mx-auto max-w-2xl font-primary" in:fade={{ duration: 200, delay: 200 }}>
 			<div class="mx-5">

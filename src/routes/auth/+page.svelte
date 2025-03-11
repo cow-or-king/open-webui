@@ -105,7 +105,7 @@
 </svelte:head>
 
 {#if loaded}
-	<div class="fixed ml-10 mt-56 z-50">
+	<div class="fixed p-8 z-50">
 		<div class="flex ">
 			<div class=" self-center">
 				<img
@@ -119,15 +119,15 @@
 	</div>
 
 	<div class=" bg-white dark:bg-gray-950 min-h-screen w-full flex justify-center font-primary">
-		<div class="hidden lg:flex lg:flex-1 px-10 md:px-16 w-full bg-gray-100 justify-center">
+		<div class="hidden lg:flex lg:flex-1 px-10 md:px-16 w-full bg-gray-100 justify-center radius">
 			<div class=" my-auto pb-16 text-left">
-				<div>
+				<div class="pt-16">
 					<div class="font-nunito font-semibold text-4xl">
 						{$i18n.t('The Clever Cow')}
 					</div>
 					
 
-					<div class="mt-2 text-gray-600 text-xl whitespace-pre text-justify">
+					<div class="mt-2 text-gray-600 text-s whitespace-pre text-justify">
 						{$i18n.t('Hello World!')}
 					</div>
 				</div>

@@ -169,30 +169,46 @@
 	}}
 />
 
-<div class="w-full h-screen max-h-[100dvh] text-white relative">
-	<div class="w-full h-full absolute top-0 left-0 bg-white dark:bg-black"></div>
+<div class="w-full h-screen max-h-[100dvh] text-white  relative">
+	<div class="w-full h-full absolute top-0 left-0  dark:bg-black"></div>
 
 	<div class="w-full absolute top-0 left-0 right-0 h-8 drag-region" />
 
 	{#if loaded}
-		<div class="fixed m-10 z-50">
-			<div class="flex space-x-2">
+
+		<div class="fixed p-8 z-50 ">
+			<div class="flex">
 				<div class=" self-center">
 					<img
-						id="logo"
 						crossorigin="anonymous"
-						src="{WEBUI_BASE_URL}/static/splash.png"
-						class=" w-6 rounded-full"
+						src="{WEBUI_BASE_URL}/static/favicon.png"
+						class=" w-40 rounded-full"
 						alt="logo"
 					/>
 				</div>
 			</div>
 		</div>
 
+
 		<div
-			class="fixed bg-transparent min-h-screen w-full flex justify-center font-primary z-50 text-black dark:text-white"
+			class="fixed bg-transparent min-h-screen w-full flex justify-center font-primary text-black dark:text-white"
 		>
-			<div class="w-full sm:max-w-md px-10 min-h-screen flex flex-col text-center">
+			<div class="hidden lg:flex lg:flex-1 px-10 md:px-16 w-full justify-center bg-gray-100 radius">
+				<div class=" my-auto pb-16 text-left ">
+					<div class="pt-16">
+						<div class="font-nunito font-semibold text-4xl">
+							{$i18n.t('The Clever Cow')}
+						</div>
+						
+
+						<div class="mt-2 text-gray-600 text-s whitespace-pre text-justify   ">
+							{$i18n.t('Hello World!')}
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class=" sm:max-w-md px-10 bg-white min-h-screen flex flex-col text-center">
 				{#if ($config?.features.auth_trusted_header ?? false) || $config?.features.auth === false}
 					<div class=" my-auto pb-10 w-full">
 						<div
@@ -302,14 +318,14 @@
 								{#if $config?.features.enable_login_form || $config?.features.enable_ldap}
 									{#if mode === 'ldap'}
 										<button
-											class="bg-gray-700/5 hover:bg-gray-700/10 dark:bg-gray-100/5 dark:hover:bg-gray-100/10 dark:text-gray-300 dark:hover:text-white transition w-full rounded-full font-medium text-sm py-2.5"
+											class="bg-primary-light hover:bg-gray-700/10 dark:bg-gray-100/5 dark:hover:bg-gray-100/10 dark:text-gray-300 dark:hover:text-white transition w-full rounded-full font-medium text-sm py-2.5"
 											type="submit"
 										>
 											{$i18n.t('Authenticate')}
 										</button>
 									{:else}
 										<button
-											class="bg-gray-700/5 hover:bg-gray-700/10 dark:bg-gray-100/5 dark:hover:bg-gray-100/10 dark:text-gray-300 dark:hover:text-white transition w-full rounded-full font-medium text-sm py-2.5"
+											class="bg-primary-light hover:bg-gray-700/10 dark:bg-gray-100/5 dark:hover:bg-gray-100/10 dark:text-gray-300 dark:hover:text-white transition w-full rounded-full font-medium text-sm py-2.5"
 											type="submit"
 										>
 											{mode === 'signin'

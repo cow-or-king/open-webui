@@ -82,7 +82,7 @@
 
 <div class="px-1 mb-1 flex justify-center space-x-2 relative z-10" id="search-container">
 	<div class="flex w-full rounded-xl" id="chat-search">
-		<div class="self-center pl-3 py-2 rounded-l-xl bg-transparent">
+		<div class="self-center pl-3 py-2 rounded-l-xl bg-gray-50">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 20 20"
@@ -98,7 +98,7 @@
 		</div>
 
 		<input
-			class="w-full rounded-r-xl py-1.5 pl-2.5 pr-4 text-sm bg-transparent dark:text-gray-300 outline-hidden"
+			class="w-full rounded-r-xl py-1.5 pl-2.5 pr-4 text-sm bg-gray-50 dark:text-gray-300 outline-hidden"
 			placeholder={placeholder ? placeholder : $i18n.t('Search')}
 			bind:value
 			on:input={() => {

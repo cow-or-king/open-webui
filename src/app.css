@@ -13,6 +13,12 @@
 }
 
 @font-face {
+	font-family: 'Nunito';
+	src: url('/assets/fonts/Nunito-Regular.ttf');
+	font-display: swap;
+}
+
+@font-face {
 	font-family: 'Mona Sans';
 	src: url('/assets/fonts/Mona-Sans.woff2');
 	font-display: swap;
@@ -67,7 +73,7 @@ math {
 }
 
 .font-primary {
-	font-family: 'Archivo', sans-serif;
+	font-family: 'Nunito';
 }
 
 .drag-region {
@@ -371,4 +377,58 @@ input[type='number'] {
 
 .hljs-strong {
 	font-weight: 700;
+}
+
+/* ADD CSS  */
+
+.bg-primary,
+.bg-emerald-700 {
+	background-color: #1f4735;
+}
+.tx-primary {
+	color: #1f4735;
+}
+
+.opacity {
+	opacity: 10;
+}
+
+.font-nunito {
+	font-family: 'nunito';
+}
+
+.tx-secondary-light {
+	color: #c13080;
+}
+
+.bg-emerald-700:hover,
+.bg-primary-light,
+.bg-emerald-600 {
+	background-color: #a1d6a6;
+}
+.bg-primary {
+	background-color: rgba(161, 214, 166, 0.51);
+}
+
+.bg-secondary {
+	background-color: #661940;
+}
+.bg-secondary-light {
+	background-color: #c13080;
+}
+.bg-yel {
+	background-color: #f1e97e;
+}
+
+.bg-gray-100 {
+	--tw-bg-opacity: 1;
+	background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.radius {
+	border-radius: 15px !important;
+}
+
+.text-14 {
+	font-size: 14px;
 }

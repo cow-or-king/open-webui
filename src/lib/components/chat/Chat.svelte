@@ -644,45 +644,48 @@
 	//////////////////////////
 
 	const initNewChat = async () => {
-		if ($page.url.searchParams.get('models')) {
-			selectedModels = $page.url.searchParams.get('models')?.split(',');
-		} else if ($page.url.searchParams.get('model')) {
-			const urlModels = $page.url.searchParams.get('model')?.split(',');
+	
+		// Always use the default model.
+		selectedModels = $config?.default_models.split(',') ?? [];
+		// if ($page.url.searchParams.get('models')) {
+		// 	selectedModels = $page.url.searchParams.get('models')?.split(',');
+		// } else if ($page.url.searchParams.get('model')) {
+		// 	const urlModels = $page.url.searchParams.get('model')?.split(',');
 
-			if (urlModels.length === 1) {
-				const m = $models.find((m) => m.id === urlModels[0]);
-				if (!m) {
-					const modelSelectorButton = document.getElementById('model-selector-0-button');
-					if (modelSelectorButton) {
-						modelSelectorButton.click();
-						await tick();
+		// 	if (urlModels.length === 1) {
+		// 		const m = $models.find((m) => m.id === urlModels[0]);
+		// 		if (!m) {
+		// 			const modelSelectorButton = document.getElementById('model-selector-0-button');
+		// 			if (modelSelectorButton) {
+		// 				modelSelectorButton.click();
+		// 				await tick();
 
-						const modelSelectorInput = document.getElementById('model-search-input');
-						if (modelSelectorInput) {
-							modelSelectorInput.focus();
-							modelSelectorInput.value = urlModels[0];
-							modelSelectorInput.dispatchEvent(new Event('input'));
-						}
-					}
-				} else {
-					selectedModels = urlModels;
-				}
-			} else {
-				selectedModels = urlModels;
-			}
-		} else {
-			if (sessionStorage.selectedModels) {
-				selectedModels = JSON.parse(sessionStorage.selectedModels);
-				sessionStorage.removeItem('selectedModels');
-			} else {
-				if ($settings?.models) {
-					selectedModels = $settings?.models;
-				} else if ($config?.default_models) {
-					console.log($config?.default_models.split(',') ?? '');
-					selectedModels = $config?.default_models.split(',');
-				}
-			}
-		}
+		// 				const modelSelectorInput = document.getElementById('model-search-input');
+		// 				if (modelSelectorInput) {
+		// 					modelSelectorInput.focus();
+		// 					modelSelectorInput.value = urlModels[0];
+		// 					modelSelectorInput.dispatchEvent(new Event('input'));
+		// 				}
+		// 			}
+		// 		} else {
+		// 			selectedModels = urlModels;
+		// 		}
+		// 	} else {
+		// 		selectedModels = urlModels;
+		// 	}
+		// } else {
+		// 	if (sessionStorage.selectedModels) {
+		// 		selectedModels = JSON.parse(sessionStorage.selectedModels);
+		// 		sessionStorage.removeItem('selectedModels');
+		// 	} else {
+		// 		if ($settings?.models) {
+		// 			selectedModels = $settings?.models;
+		// 		} else if ($config?.default_models) {
+		// 			console.log($config?.default_models.split(',') ?? '');
+		// 			selectedModels = $config?.default_models.split(',');
+		// 		}
+		// 	}
+		// }
 
 		selectedModels = selectedModels.filter((modelId) => $models.map((m) => m.id).includes(modelId));
 		if (selectedModels.length === 0 || (selectedModels.length === 1 && selectedModels[0] === '')) {
@@ -789,10 +792,10 @@
 			if (chatContent) {
 				console.log(chatContent);
 
-				selectedModels =
-					(chatContent?.models ?? undefined) !== undefined
-						? chatContent.models
-						: [chatContent.models ?? ''];
+				// selectedModels =
+				// 	(chatContent?.models ?? undefined) !== undefined
+				// 		? chatContent.models
+				// 		: [chatContent.models ?? ''];
 				history =
 					(chatContent?.history ?? undefined) !== undefined
 						? chatContent.history

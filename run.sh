@@ -17,3 +17,6 @@ docker run -d -p "$host_port":"$container_port" \
     "$image_name"
 
 docker image prune -f
+
+
+/Users/twe/miniconda3
